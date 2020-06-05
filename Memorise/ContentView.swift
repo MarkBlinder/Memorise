@@ -15,7 +15,7 @@ struct ContentView: View {
     
     var body: some View {
         HStack {
-            ForEach(viewModel.cards) { card in
+            ForEach(viewModel.cards) { card in // ForEach must iterate of Int range or identifiable list
                 CardView(card: card).onTapGesture {
                     self.viewModel.Choose(card: card)
                 }
